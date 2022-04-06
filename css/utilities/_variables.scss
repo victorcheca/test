@@ -1,0 +1,96 @@
+//colors globals
+$color-primary: #FFC944;
+$color-secondary:#D7D7D7;
+$color-dark:#1E0028;
+$color-white:#FFFFFF;
+$color-accent:#5D50C6;
+$color-primary-dark:#E8B73E;
+$color-accent-dark:#473D99;
+$color-primary-light:#FFC94426;/* lighten($color-primary-dark, 15%); */ //opacity 15%?
+$color-accent-light:#5D50C61A; //opacity 10%
+//colors text
+$color-body:#424142;
+$color-muted:#B6B6B6;
+//colors grey
+$color-grey-1:#262626;
+$color-grey-2:#424142;
+$color-grey-3:#7F7F7F;
+$color-grey-4:#B6B6B6;
+$color-grey-5:#D7D7D7;
+$color-grey-6:#F5F5F5;
+//colors matisos corporatius
+$color-yellow-1:#FFD56E;
+$color-yellow-2:#FFE197;
+$color-yellow-3:#FFEDC1;
+$color-yellow-4:#FFF3D5;
+$color-purple-1:#440957;
+$color-purple-2:#7B3C90;
+$color-purple-3:#9C6DAC;
+$color-purple-4:#BD9EC8;
+//colors complementaris
+$color-blue-1:#1DB9C3;
+$color-blue-2:#4FC9D0;
+$color-blue-3:#81D8DE;
+$color-blue-4:#B4E8EB;
+$color-blue-5:#CDEFF2;
+$color-pink-1:#FF5DA2;
+$color-pink-2:#FF81B7;
+$color-pink-3:#FFA5CB;
+$color-pink-4:#FFC9E0;
+$color-pink-5:#FFDBEA;
+$color-indigo-1:#938AD9;
+$color-indigo-2:#B7B1E6;
+$color-indigo-3:#C9C5EC ;
+$color-indigo-4:#EDECF9;
+
+
+//vertical spacing
+$vertical-spacing-1:24px;
+$vertical-spacing-2:40px;
+$vertical-spacing-3:64px;
+$vertical-spacing-4:80px;
+$vertical-spacing-5:120px;
+
+//Tipografias
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
+$font-family: 'Work Sans';
+$font-weight-normal:400;
+$font-weight-bold:600;
+
+$link:$color-accent;
+
+
+$border-radius-min:0.3rem;
+$border-radius: 0.625rem;
+$border-radius-cta:2.5rem;
+
+$border-radius-form-input:50px;
+$border-radius-form-textarea:4px;
+
+$trans:0.1s all ease-in-out;
+//$trans-focus:border-color 0.15s ease-in-out, box-shadow...
+
+$heading-h1:48px;
+$heading-h2:35px;
+$heading-h3:24px;
+$heading-h4:20px;
+$heading-h5:16px;
+$heading-h6:14px;
+//responsive
+$heading-h1-res:35px;
+$heading-h2-res:30px;
+
+
+$display-1:96px;
+$display-2:70px;
+$display-3:55px;
+$display-4:35px;
+
+
+//shadows
+$small-shadow:0px 0px 15px rgba(0, 0, 0, 0.1);
+$regular-shadow:0px 8px 16px rgba(30, 0, 40, 0.08);
+$larger-shadow:0px 16px 48px rgba(30, 0, 40, 0.1);
+
+
