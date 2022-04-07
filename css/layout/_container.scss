@@ -1,9 +1,10 @@
 body{
-    font-family: $font-family;
-    display: block;
+    //font-family: $font-family;
+    /* display: block;
     margin: 0;
-    padding: 0;
+    padding: 0; */
 }
+
 .container{
     box-sizing: border-box;
     padding-left: 1rem;
@@ -109,7 +110,7 @@ body{
 }
 
 // quitar el padding, añadir gap. cambiar justificontents ok
- .container-tiendas{
+.container-tiendas{
     padding-top: $vertical-spacing-3;
     padding-bottom: $vertical-spacing-3;
     text-align: center;
@@ -153,10 +154,7 @@ body{
         flex-wrap: wrap;
         justify-content:space-around;
         align-items: center; */
-        @media screen and (max-width: 767px){
-            
-            
-        }
+        
         &-img{
             /* display: flex;
             justify-content:center; */
@@ -247,7 +245,6 @@ body{
             
         }
         &-article{
-            width: 25%;
             text-align: center;
             @media screen and (max-width: 767px){
                 flex-direction: column;
@@ -264,32 +261,30 @@ body{
     padding-top: $vertical-spacing-4;
     padding-bottom: $vertical-spacing-4;
     display: flex;
-    justify-content: center;
-    align-items: center;
     @media screen and (max-width: 767px){
+       height: auto;
+       
+    }
+    &__items{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap:3rem;
+        @media screen and (max-width: 767px){
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            
+        }
+    }
+    &__item{
         flex-direction: column;
-        height: auto;
-        margin-top: $vertical-spacing-4;
+        flex-basis: 100%;
     }
     
-    &__item{
-        margin:20px;
-    }
-    /* &__item{
-        width: 20%;
-        margin: 10px;
-        background-color: $color-white;
-        border-radius: 20px;
-        box-shadow: $regular-shadow;
-        img{
-            padding: 20px;
-            max-width: 100px;
-        }
-        p{
-            padding: 20px;
-        }
-    } */
 }
+
 
 .container-queremos{
     background-color: $color-grey-6;
@@ -298,17 +293,16 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
-    @media screen and (max-width: 767px){
-        flex-direction: column;
-        height: auto;
-        margin-top: $vertical-spacing-4;
-        
-    }
 
     &__contenido{
         display: flex;
+        flex-direction: row;
         justify-content:space-between;
+        @media screen and (max-width: 767px){
+            padding-top: 0;
+            padding-bottom: 0;
+            flex-direction: column;
+        }
     }
     &__text{
         width: 40%;
