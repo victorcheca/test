@@ -122,14 +122,6 @@
   margin-top: 30px;
 }
 
-.overlay-content hr {
-  width: 50%;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  height: 0.1px;
-  opacity: 0.5;
-}
-
 .overlay-content a {
   padding: 8px;
   position: relative;
@@ -140,8 +132,20 @@
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
+.overlay-content hr {
+  width: 50%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 0.1px;
+  opacity: 0.5;
+}
+
+.overlay-content
 .overlay-content a:hover {
   opacity: .5;
 }
@@ -291,14 +295,14 @@ body {
   }
 }
 
-.hero__texto p {
+.hero__texto h2 {
   font-size: 48px;
   font-weight: 600;
   line-height: 60px;
 }
 
 @media screen and (max-width: 767px) {
-  .hero__texto p {
+  .hero__texto h2 {
     font-size: 35px;
     line-height: 48px;
   }
@@ -882,6 +886,9 @@ footer .cp {
   font-weight: 600;
   border: 1px;
   border-style: solid;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-width: 80%;
 }
 
 @media screen and (max-width: 767px) {
@@ -896,14 +903,14 @@ footer .cp {
 
 .button--accent {
   background-color: #5D50C6;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border-color: #5D50C6;
   text-decoration: none;
 }
 
 .button--accent-outline {
   background-color: transparent;
-  color: #5D50C6;
+  color: #5D50C6 !important;
   border-color: #5D50C6;
 }
 
@@ -911,6 +918,7 @@ footer .cp {
   height: auto;
   margin: 10px auto;
   width: 50%;
+  color: #FFFFFF !important;
 }
 
 .card {
