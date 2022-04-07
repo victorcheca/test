@@ -81,6 +81,7 @@ body{
             line-height: 60px;
             @media screen and (max-width: 767px){
                 font-size: $heading-h1-res;
+                line-height: 48px;
             }
         }
     }

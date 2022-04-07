@@ -245,6 +245,7 @@ body {
 @media screen and (max-width: 767px) {
   .hero__texto p {
     font-size: 35px;
+    line-height: 48px;
   }
 }
 .hero__imagen {
