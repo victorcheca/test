@@ -108,25 +108,36 @@ body{
     }
 }
 
+// quitar el padding, añadir gap. cambiar justificontents ok
  .container-tiendas{
     padding-top: $vertical-spacing-3;
     padding-bottom: $vertical-spacing-3;
     text-align: center;
+    h5{
+        font-size: $heading-h5;
+        margin-bottom: $vertical-spacing-3;
+    }
     &__items{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        gap:25px;
         img{
-            max-width: 120px;
+            max-width: 200px;
             height: auto;
-            max-height: 30px;
-            padding: 30px;
+            max-height: auto;
+            @media screen and (max-width: 767px){
+                max-width: 100px;
+                
+            }
             
         }
     }
 }
-    
+ 
+// quitar el with 35, añadir gap. cambio a display grid ok
 .container-lista{
+    display: block;
     margin-top: $vertical-spacing-3;
     margin-bottom: $vertical-spacing-3;
     @media screen and (max-width: 767px){
@@ -138,50 +149,56 @@ body{
         line-height: 48px;
     }
     &__contenido{
-        width: 100%;
-        display: flex;
+       /*  display: flex;
         flex-wrap: wrap;
         justify-content:space-around;
-        align-items: center;
+        align-items: center; */
         @media screen and (max-width: 767px){
-            flex-direction: column;
+            
             
         }
         &-img{
-            max-height: 350px;
+            /* display: flex;
+            justify-content:center; */
+            max-width: 550px;
+
             @media screen and (max-width: 767px){
                 max-height: 250px;
                 
             }
         }
         &-items{
-            display: flex;
+          /*   display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-around; 
+            gap:100px;*/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:200px;
             margin-bottom: $vertical-spacing-4;
             @media screen and(max-width: 767px){
-                flex-direction: column;
-                
+                grid-template-columns: 90%;
+                grid-gap:0;
             }
         }
 
         &-items:nth-child(2){
-            display: flex;
-            flex-direction: row;
+            /* display: flex;
+            flex-direction: row; */
             @media screen and(max-width: 767px){
+                display: flex;
                 flex-direction: column-reverse;
+                
             }
         }
         
         &-item{
-            width: 35%;
-            img{
-                padding: 10px;
-            }
+           /*  display: flex;
+            flex-direction: column;
+            justify-content: center; */
             @media screen and (max-width: 767px){
-                flex-direction: column;
+                margin-bottom: $vertical-spacing-2;
                 
-                width: 100%;
             }
         }
         
