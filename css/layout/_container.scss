@@ -279,16 +279,24 @@ body{
     padding-top: $vertical-spacing-4;
     padding-bottom: $vertical-spacing-4;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    
     @media screen and (max-width: 767px){
         flex-direction: column;
         height: auto;
         margin-top: $vertical-spacing-4;
         
     }
+
+    &__contenido{
+        display: flex;
+        justify-content:space-between;
+    }
     &__text{
-        width: 35%;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
         @media screen and (max-width: 767px){
             width: 90%;
             padding: 0;
@@ -304,6 +312,7 @@ body{
     &__cards{
         display: flex;
         flex-direction: row;
+        width: auto;
         @media screen and (max-width: 767px){
             flex-direction: column;
             margin-bottom: $vertical-spacing-4;
