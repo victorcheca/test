@@ -37,17 +37,19 @@
     grid-template-columns: repeat(3, 25%);
     justify-content: center;
     gap:30px;
-  
+    
     &__card{
       display: flex;
       justify-content: center;
       position: relative;
       height: auto;
       cursor: pointer;
+      box-shadow: $regular-shadow;
+      background-color: transparent!important;
       //border: 1px solid;
       &:hover{
        .text{
-         background-color: white;
+         background-color: $color-yellow-3;
          transition: .5s;
          transform: scale(1.06);
          transform:translateX(-10px)
@@ -63,6 +65,7 @@
        }
       }
       .img{
+        
         img{
           width: 100%;
           height: auto;
@@ -71,7 +74,7 @@
         }
       }
       .text{
-        background-color: whitesmoke;
+        background-color:$color-white;
         width: 80%;
         height:max-content;
         padding-right: 10px;

@@ -52,6 +52,39 @@
   }
 }
 
+.blog-nav {
+  margin-top: 75px;
+  width: 100%;
+  background-color: #FFE197;
+  border-top: 2px solid #FFD56E;
+}
+
+.blog-nav .menu-blog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.blog-nav .menu-blog a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.blog-nav .menu-blog a:hover {
+  text-decoration: underline;
+}
+
 .burger {
   top: 40px;
   right: 55px;
@@ -152,6 +185,33 @@
 
 .mostrar {
   height: 100%;
+}
+
+.heading-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.heading-1 h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 0;
+  line-height: 25px;
+}
+
+.heading-1 p {
+  font-size: 16px;
 }
 
 .menu-principal {
@@ -838,6 +898,15 @@ body {
   opacity: .7;
 }
 
+.block-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 footer {
   width: 100%;
   height: auto;
@@ -1023,10 +1092,13 @@ footer .cr {
   position: relative;
   height: auto;
   cursor: pointer;
+  -webkit-box-shadow: 0px 8px 16px rgba(30, 0, 40, 0.08);
+          box-shadow: 0px 8px 16px rgba(30, 0, 40, 0.08);
+  background-color: transparent !important;
 }
 
 .cards__card:hover .text {
-  background-color: white;
+  background-color: #FFEDC1;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: scale(1.06);
@@ -1053,7 +1125,7 @@ footer .cr {
 }
 
 .cards__card .text {
-  background-color: whitesmoke;
+  background-color: #FFFFFF;
   width: 80%;
   height: -webkit-max-content;
   height: -moz-max-content;
