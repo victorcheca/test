@@ -30,7 +30,7 @@
 }
 
 
-.cards{
+/* .cards{
     margin-top: 200px;
     margin-bottom: 200px;
     display: grid;
@@ -43,6 +43,7 @@
       justify-content: center;
       position: relative;
       height: auto;
+      width: 90%;
       cursor: pointer;
       box-shadow: $regular-shadow;
       background-color: transparent!important;
@@ -90,4 +91,91 @@
     }
   
   }
-  
+   */
+
+
+  .blog-card{
+    width: 1110px;
+    height: 300px;
+    //border: 1px solid;
+    display: flex;
+    position: relative;
+    box-shadow: $regular-shadow;
+    background: transparent;
+    border-radius: 15px!important;
+    &__img{
+      img{
+        height: 300px;
+        border-radius: 15px!important;
+      }
+    }
+    &__container-text{
+      border-radius: 15px!important;
+      line-height: 30px;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      padding: 0rem;
+      width: 750px;
+      height: 300px;
+      clip-path: ellipse(50% 110% at 70% 50%);
+      border-radius: 15px;
+      &__text{
+        padding-left: 15rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+      }
+      
+    }
+  }
+
+  .cards{
+    width: 1110px;
+    height: auto;
+    margin-top: 100px;
+    display: grid;
+    justify-content: center;
+    gap:30px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 300px;
+    &__blog-card--small{
+      width: 350px;
+      height: 140px;
+      //border: 1px solid;
+      display: flex;
+      position: relative;
+      box-shadow: $large-shadow;
+      border-radius: 10px!important;
+      &__img{
+        img{
+          width: auto;
+          height: 140px;
+          border-radius: 10px!important;
+        }
+      }
+      &__container-text{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0px;
+        background-color: white;
+        //border:1px solid;
+        width: 250px;
+        height: 140px;
+        clip-path: ellipse(50% 110% at 70% 50%);
+        border-radius: 10px!important;
+        &__text{
+          padding-left: 4rem;
+          padding-top: 0.1rem;
+          padding-right: .1rem;
+          p{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 21px;
+          }
+        }
+      
+    }
+    }
+  }

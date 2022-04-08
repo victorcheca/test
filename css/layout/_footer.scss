@@ -1,9 +1,10 @@
 
 footer{
     width: 100%;
-    height: auto;
+    //height: auto;
     background-color: $color-dark;
     color: $color-white;
+    
     .footer-cols{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -13,7 +14,7 @@ footer{
         max-width: 1300px;
         margin-left: auto;
         margin-right: auto;
-        
+        padding-top: $vertical-spacing-3;
         @media screen and (max-width: 767px){
             grid-template-columns:90%;
             height: auto;

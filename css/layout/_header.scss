@@ -41,26 +41,47 @@
 
 
 .blog-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top:75px;
     width: 100%;
-    background-color: $color-yellow-2;
-    border-top: 2px solid $color-yellow-1;
-    .menu-blog{
+    background-color: $color-dark;
+    position: fixed;
+    z-index:1;
+    &__logo{
+        margin-right: 3rem;
+    }
+    &__menu-blog{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10rem;
-        padding-top:10px;
-        padding-bottom: 10px;
+        gap: 6rem;
+        padding-top:20px;
+        padding-bottom: 20px;
         a{
             text-decoration: none;
-            color:black;
+            color:$color-white;
             font-weight: $font-weight-normal;
             font-size: 16px;
             &:hover{
                 text-decoration: underline;
 
             }
+        }
+    }
+    &__search{
+        margin-left: 6rem;
+        input{
+            border: 1px solid #E4E4E4;
+            box-sizing: border-box;
+            border-radius: 30.8px;
+            position: static;
+            position: static;
+            width: 255px;
+            height: 29px;
+            left: 0px;
+            top: 0px;
         }
     }
 }
