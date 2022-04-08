@@ -475,38 +475,33 @@ body {
 }
 
 .container-pide {
+  display: block;
   background-color: #1E0028;
   padding-top: 64px;
   padding-bottom: 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
-  .container-pide {
+  .container-pide-contenido {
     height: auto;
     margin-top: 80px;
   }
 }
 
-.container-pide__texto {
+.container-pide-contenido__texto {
   padding-bottom: 64px;
-  width: 35%;
+  width: 50%;
   color: #FFFFFF;
   text-align: center;
   margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
-  .container-pide__texto {
+  .container-pide-contenido__texto {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -515,24 +510,23 @@ body {
   }
 }
 
-.container-pide__texto h2 {
+.container-pide-contenido__texto h2 {
   font-weight: 600;
   font-size: 48px;
 }
 
-.container-pide__articles {
+.container-pide-contenido__articles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  gap: 4rem;
   color: #FFFFFF;
 }
 
 @media screen and (max-width: 767px) {
-  .container-pide__articles {
+  .container-pide-contenido__articles {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -541,12 +535,27 @@ body {
   }
 }
 
-.container-pide__articles-article {
+.container-pide-contenido__articles-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
-  .container-pide__articles-article {
+  .container-pide-contenido__articles-article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -831,21 +840,26 @@ body {
 
 footer {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: #1E0028;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (15%)[4];
-      grid-template-columns: repeat(4, 15%);
-  grid-gap: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: #FFFFFF;
 }
 
+footer .footer-cols {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 767px) {
-  footer {
+  footer .footer-cols {
     -ms-grid-columns: 90%;
         grid-template-columns: 90%;
     height: auto;
@@ -853,35 +867,34 @@ footer {
   }
 }
 
-footer .footer-col {
-  margin-top: 50px;
+footer .footer-cols__col {
   color: #FFFFFF;
-  padding-left: 10px;
 }
 
-footer .footer-col a {
+footer .footer-cols__col a {
   text-decoration: none;
   color: white;
 }
 
-footer .footer-col ul {
+footer .footer-cols__col ul {
   list-style: none;
   padding: 0;
 }
 
-footer .footer-col li {
+footer .footer-cols__col li {
   list-style: none;
   border-width: 0;
   line-height: 2.4em;
   color: white;
 }
 
-footer .footer-col__redes img {
+footer .footer-cols__col__redes img {
   padding: 10px;
 }
 
-footer .cp {
+footer .cr {
   font-size: 11px;
+  padding-bottom: 2rem;
 }
 
 .button {
@@ -1014,8 +1027,8 @@ footer .cp {
 
 .cards__card:hover .text {
   background-color: white;
-  -webkit-transition: 2s;
-  transition: 2s;
+  -webkit-transition: .5s;
+  transition: .5s;
   -webkit-transform: scale(1.06);
           transform: scale(1.06);
   -webkit-transform: translateX(-10px);

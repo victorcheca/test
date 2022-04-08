@@ -206,53 +206,65 @@ body{
 
 
 .container-pide{
+    display: block;
     background-color: $color-dark;
     padding-top: $vertical-spacing-3;
     padding-bottom: $vertical-spacing-3;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    @media screen and (max-width: 767px){
-        height: auto;
-        margin-top: $vertical-spacing-4;
-    }
-    &__texto{
-        padding-bottom: $vertical-spacing-3;
-        width: 35%;
-        color:$color-white;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: $vertical-spacing-2;
-        margin-bottom: $vertical-spacing-2;
+    
+    &-contenido{
+        
+        
         @media screen and (max-width: 767px){
-            flex-direction: column;
-            width: 100%;
-            
+            height: auto;
+            margin-top: $vertical-spacing-4;
         }
-        h2{
-            font-weight: $font-weight-bold;
-            font-size: $heading-h1;
-        }
-    }
-    &__articles{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        color:$color-white;
-        @media screen and (max-width: 767px){
-            flex-direction: column;
-            width: 100%;
-            
-        }
-        &-article{
+        &__texto{
+            padding-bottom: $vertical-spacing-3;
+            width: 50%;
+            color:$color-white;
             text-align: center;
+            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: $vertical-spacing-2;
+            margin-bottom: $vertical-spacing-2;
             @media screen and (max-width: 767px){
                 flex-direction: column;
                 width: 100%;
-                padding: 0;
+                
+            }
+            h2{
+                font-weight: $font-weight-bold;
+                font-size: $heading-h1;
+            }
+        }
+        &__articles{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+            color:$color-white;
+            
+            @media screen and (max-width: 767px){
+                flex-direction: column;
+                width: 100%;
+                
+            }
+            &-article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                flex-basis: 25%;
+                text-align: center;
+                @media screen and (max-width: 767px){
+                    flex-direction: column;
+                    width: 100%;
+                    padding: 0;
+                }
             }
         }
     }
+    
 }
 
 .container-cards{
