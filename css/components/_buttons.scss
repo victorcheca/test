@@ -34,4 +34,20 @@
         width: 50%;
         color:$color-white!important;
     }
+
+    &--black-outline {
+        background-color: transparent;
+        color: black;
+        border-color: black;
+        max-width: 100%;
+        text-decoration: none;
+    }
+
+    &--yellow {
+        background-color: $color-yellow-1;
+        color: black;
+        border-color: $color-primary;
+        text-decoration: none;
+        max-width: 100%;
+    }
 }
