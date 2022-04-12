@@ -17,40 +17,6 @@ body{
     margin-right: auto;
 }
 
-/* .hero{
-        display: flex;
-        flex-wrap:wrap;
-        justify-content:space-between;
-        background-color: $color-primary;
-        height: 564px;
-        width: 100%;
-        font-family: $font-family;
-        
-        &__texto{
-            margin: 0 auto;
-            width: 30%;
-            padding: 1em;
-            p{
-                font-size: 48px;
-                font-weight: $font-weight-bold;
-                
-            }
-           
-        }
-        &__imagen{
-            display: flex;
-            //este me ha costado
-            align-items: flex-end;
-            height: 564px;
-            width: 40%;
-       
-           img{
-            height: 95%;
-           }
-        }
-
-}
- */
 
 .hero{
     margin-top: 75px;
@@ -447,7 +413,7 @@ body{
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    margin-top: 200px;
+    //margin-top: 200px;
     @media screen and (max-width: 767px){
         display: none;          
            

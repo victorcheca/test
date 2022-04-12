@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function (){
       if (elmnt == y[i]) {
         arrNo.push(i)
       } else {
-        y[i].classList.remove("select-arrow-active");
+        //y[i].classList.remove("select-arrow-active");
       }
     }
     for (i = 0; i < xl; i++) {

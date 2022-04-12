@@ -154,6 +154,7 @@
   height: 29px;
   left: 0px;
   top: 0px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -394,40 +395,6 @@ body {
   margin-right: auto;
 }
 
-/* .hero{
-        display: flex;
-        flex-wrap:wrap;
-        justify-content:space-between;
-        background-color: $color-primary;
-        height: 564px;
-        width: 100%;
-        font-family: $font-family;
-        
-        &__texto{
-            margin: 0 auto;
-            width: 30%;
-            padding: 1em;
-            p{
-                font-size: 48px;
-                font-weight: $font-weight-bold;
-                
-            }
-           
-        }
-        &__imagen{
-            display: flex;
-            //este me ha costado
-            align-items: flex-end;
-            height: 564px;
-            width: 40%;
-       
-           img{
-            height: 95%;
-           }
-        }
-
-}
- */
 .hero {
   margin-top: 75px;
   background-color: #FFC944;
@@ -1060,7 +1027,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   max-width: 100%;
-  margin-top: 200px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1881,9 +1847,11 @@ footer .cr {
 }
 
 .blog-card--square:hover {
-  -webkit-box-shadow: 5px 5px #FFEDC1;
-          box-shadow: 5px 5px #FFEDC1;
   cursor: pointer;
+}
+
+.blog-card--square:hover p {
+  text-decoration: underline;
 }
 
 .blog-card--square__img img {
@@ -2012,22 +1980,32 @@ footer .cr {
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
+  /* position: absolute;
+    content: "";
+    top: 18px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent; */
+  content: '';
   position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  right: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 /* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
+/* .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+    
+  } */
 /* style the items (options), including the selected item: */
 .select-items div {
   color: black;

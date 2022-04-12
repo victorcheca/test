@@ -258,7 +258,9 @@
       box-shadow: $larger-shadow;
       border-radius: 10px!important;
       &:hover{
-        box-shadow: 5px 5px $color-yellow-3;
+        p{
+          text-decoration: underline;
+        }
         
         cursor:pointer;
       }
