@@ -47,6 +47,21 @@ footer{
         }
     }
     
+    .container-descargate{
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+        align-items: flex-start;
+        .img-app{
+            padding: 10px;
+            width: 100px;
+        }
+    }
+    
+
+
+
+
     .cr{
         font-size: 11px;
         padding-bottom: 2rem;

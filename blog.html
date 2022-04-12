@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- buscar emmet abreviation -->
-    <!-- #################################HEADER########################################### -->
+    <!-- HEADER -->
     <header class="header">
         <div class="header__container">
             <!-- NAVEGACIÓN PÁGINA PRINCIPAL -->
@@ -58,18 +58,47 @@
     </header>
     <!-- MENÚ BLOG -->
     <div class="blog-nav">
+      <div class="menu-blog-responsive">
+        <div class="menu-blog-responsive__item"><a href="#">Categorias</a></div>
+      </div>
       <div class="blog-nav__logo">
         <a href="blog.html"><img class="logo" src="assets/logo/blogBB.png" alt=""></a>
+        
       </div>
       <nav class="blog-nav__menu-blog">
         <img src="assets/img/Rectangle 155.png" alt="">
           <div class="menu-blog__item"><a href="#">Todo el contenido</a></div>
-          <div class="menu-blog__item"><a href="#">Maternidad</a></div>
-          <div class="menu-blog__item"><a href="#">Productos</a></div> 
+          <div class="menu-blog__item">
+            <div class="custom-select">
+              <select>
+                <option value="0">Maternidad</option>
+                <option value="1">Todo</option>
+                <option value="2">Embarazo</option>
+                <option value="3">Preparándose para el bebé</option>
+              </select>
+            </div>
+          </div>
+          <div class="menu-blog__item">
+            <div class="custom-select">
+              <select>
+                <option value="0">Productos</option>
+                <option value="1"><a href="#">Todo</a></option>
+                <option value="2">Carritos</option>
+                <option value="3">Cunas</option>
+                <option value="4">Portabebés</option>
+                <option value="5">Pañales</option>
+                <option value="6">Ropa</option>
+              </select>
+            </div>
+          </div>
+    
+          <!-- <div class="menu-blog__item"><a href="#">Maternidad</a></div>
+          <div class="menu-blog__item"><a href="#">Productos</a></div>  -->
       </nav>
       <form>
         <div class="blog-nav__search">
-          <input type="search" id="mySearch" name="" placeholder="Buscar... ">
+          <input type="search" id="mySearch" name="" placeholder="    Buscar... ">
+          <img class="lupa" src="assets/img/Lupa.svg" alt="">
         </div>
       </form>
     </div>
@@ -177,6 +206,7 @@
       <div class="container-seccion">
         <div class="container-seccion__h1"><h1>Productos</h1></div>
         <div class="cards">
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -188,6 +218,7 @@
               </div>
             </div>
           </div>
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -199,6 +230,7 @@
               </div>
             </div>
           </div>
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -210,6 +242,7 @@
               </div>
             </div>
           </div>
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -221,6 +254,7 @@
               </div>
             </div>
           </div>
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -232,6 +266,7 @@
               </div>
             </div>
           </div>
+          
           <div class="blog-card--square">
             <div class="blog-card--square__img">
               <img src="/test/assets/img/unsplash_p0hDztR46cwsquare.jpg" alt="">
@@ -243,6 +278,7 @@
               </div>
             </div>
           </div>
+
         </div>
         <div><a href="#" class="button button--black-outline">Ver todo sobre productos ></a></div>
       </div><!-- fin container sección productos -->
@@ -386,7 +422,7 @@
         <div class="footer-cols__col">
             <h2>HelloBB</h2>
             <ul>
-                <li><a href="#">Contscto</a></li>
+                <li><a href="#">Contacto</a></li>
                 <li><a href="#">Política de privacidad</a></li>
                 <li><a href="#">Aviso legal</a></li>
                 <li><a href="#">Afiliación y publicidad</a></li>
@@ -399,8 +435,11 @@
                 <img src="assets/icons/ico-social-pinterest.04a417c.svg" alt="">
                 <img src="assets/icons/face.svg" alt="">
             </div>
-            <h2>Descárgate nuestra App</h2>
-            <div class="footer__redes"><img src="assets/icons/Group.png" alt=""><img src="assets/icons/Groupapple.png" alt=""></div>
+            <div class="container-descargate">
+              <h2>Descárgate nuestra App</h2>
+              <div class="footer__redes"><img class="img-app" src="assets/icons/Group.png" alt=""><img class="img-app" src="assets/icons/Groupapple.png" alt=""></div>
+            </div>
+            
         </div>
     </div>
     
@@ -409,6 +448,86 @@
 </footer>
 
 
+<script>
+  var x, i, j, l, ll, selElmnt, a, b, c;
+  /*look for any elements with the class "custom-select":*/
+  x = document.getElementsByClassName("custom-select");
+  l = x.length;
+  for (i = 0; i < l; i++) {
+    selElmnt = x[i].getElementsByTagName("select")[0];
+    ll = selElmnt.length;
+    /*for each element, create a new DIV that will act as the selected item:*/
+    a = document.createElement("DIV");
+    a.setAttribute("class", "select-selected");
+    a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+    x[i].appendChild(a);
+    /*for each element, create a new DIV that will contain the option list:*/
+    b = document.createElement("DIV");
+    b.setAttribute("class", "select-items select-hide");
+    for (j = 1; j < ll; j++) {
+      /*for each option in the original select element,
+      create a new DIV that will act as an option item:*/
+      c = document.createElement("DIV");
+      c.innerHTML = selElmnt.options[j].innerHTML;
+      c.addEventListener("click", function(e) {
+          /*when an item is clicked, update the original select box,
+          and the selected item:*/
+          var y, i, k, s, h, sl, yl;
+          s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+          sl = s.length;
+          h = this.parentNode.previousSibling;
+          for (i = 0; i < sl; i++) {
+            if (s.options[i].innerHTML == this.innerHTML) {
+              s.selectedIndex = i;
+              h.innerHTML = this.innerHTML;
+              y = this.parentNode.getElementsByClassName("same-as-selected");
+              yl = y.length;
+              for (k = 0; k < yl; k++) {
+                y[k].removeAttribute("class");
+              }
+              this.setAttribute("class", "same-as-selected");
+              break;
+            }
+          }
+          h.click();
+      });
+      b.appendChild(c);
+    }
+    x[i].appendChild(b);
+    a.addEventListener("click", function(e) {
+        /*when the select box is clicked, close any other select boxes,
+        and open/close the current select box:*/
+        e.stopPropagation();
+        closeAllSelect(this);
+        this.nextSibling.classList.toggle("select-hide");
+        this.classList.toggle("select-arrow-active");
+      });
+  }
+  function closeAllSelect(elmnt) {
+    /*a function that will close all select boxes in the document,
+    except the current select box:*/
+    var x, y, i, xl, yl, arrNo = [];
+    x = document.getElementsByClassName("select-items");
+    y = document.getElementsByClassName("select-selected");
+    xl = x.length;
+    yl = y.length;
+    for (i = 0; i < yl; i++) {
+      if (elmnt == y[i]) {
+        arrNo.push(i)
+      } else {
+        y[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (i = 0; i < xl; i++) {
+      if (arrNo.indexOf(i)) {
+        x[i].classList.add("select-hide");
+      }
+    }
+  }
+  /*if the user clicks anywhere outside the select box,
+  then close all select boxes:*/
+  document.addEventListener("click", closeAllSelect);
+  </script>
     
     
         

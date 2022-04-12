@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     //margin: 0 auto;
+    box-sizing: border-box;
    
 }
 
@@ -437,6 +438,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: auto;
+    padding-top: 175px;
 }
 
 
@@ -444,7 +446,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
     margin-top: 200px;
+    @media screen and (max-width: 767px){
+        display: none;          
+           
+       }
     &__contenido{
         display: flex;
 
@@ -470,9 +477,19 @@ body{
     flex-direction: column;
     align-items: center;
     margin-bottom: $vertical-spacing-3;
+    max-width: 100%;
+    @media screen and (max-width: 767px){
+        //a esto habría que darle unas vueltas...
+          width: 70%;     
+           
+       }
     &__h1{
         margin-bottom: 30px;
         align-self: flex-start;
+        @media screen and (max-width: 767px){
+             width: 100%;     
+               
+           }
     }
     
 }
@@ -481,18 +498,40 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 920px;
+    max-width: 920px;
     height: 238px;
     background-color: $color-accent;
     border-radius: 20px;
     padding-top: $vertical-spacing-1;
     margin-bottom: $vertical-spacing-3;
+    @media screen and (max-width: 767px){
+        max-width: 80%;   
+        height: auto;
+        padding-bottom: 40px;
+           
+       }
     h1{
         color:$color-white;
-        
+        line-height: 34px;
+        padding-right: 40px;
+        padding-left: 40px;
+        @media screen and (max-width: 767px){
+            padding-right: 20px;
+            padding-left: 20px;
+        }
     }
     p{
         color:$color-white;
+        line-height: 24px;
+        padding-right: 40px;
+        padding-left: 40px;
+        @media screen and (max-width: 767px){
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+    .button{
+        margin-top: 30px;
     }
 }
 
@@ -500,27 +539,49 @@ body{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    width: 920px;
+    max-width: 920px;
     height: 264px;
     background-color: $color-yellow-1;
     border-radius: 20px;
     padding-top: $vertical-spacing-1;
     margin-bottom: $vertical-spacing-3;
+    @media screen and (max-width: 767px){
+        max-width: 80%;   
+        height: auto;
+        padding: 20px;
+           
+    }
+    &__h1{
+        @media screen and (max-width: 767px){
+            
+        }
+    }
     h1{
         color:black;
         padding-left: 3rem;
         width: 60%;
         line-height: 50px;
+        @media screen and (max-width: 767px){
+            width: 100%;
+            padding-left: 1rem;
+        }
+        
     }
     &__button{
         padding-top: 2rem;
         padding-left: 3rem;
+        @media screen and (max-width: 767px){
+            padding-left: 1rem;
+        }
     }
     &__img{
         position: absolute;
         align-self: flex-end;
         padding-right: 5rem;
         padding-top: 2rem;
+        @media screen and (max-width: 767px){
+            visibility: hidden;
+        }
    }
 }
 
@@ -537,13 +598,18 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 730px;
+        max-width: 730px;
         margin-top: 200px;
-
+        @media screen and (max-width: 767px){
+            width: 90%;
+        }
        
         .img-blog{
             margin-top: $vertical-spacing-2;
             margin-bottom: $vertical-spacing-2;
+            @media screen and (max-width: 767px){
+                width: 90%;
+            }
         }
 
         .separador{
@@ -566,20 +632,32 @@ body{
         padding: 40px;
         background-color: $color-grey-6;
         width: 100%;
+        
         .pie-articulo__contenido{
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            width:min-content;
+            max-width:min-content;
+            @media screen and (max-width: 767px){
+                flex-direction: column;
+            }
             .heading-pie{
                 display: flex;
                 align-self: flex-start;
+                @media screen and (max-width: 767px){
+                    line-height: 40px;
+                    font-size: 38px;
+                }
             }
             .container-cards-pie{
                 display: flex;
                 justify-content:center;
                 align-items: center;
                 gap:30px;
+                @media screen and (max-width: 767px){
+                    flex-direction: column;
+                    width: auto;
+                }
             }
         }
         

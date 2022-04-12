@@ -4,6 +4,8 @@
     font-weight: $font-weight-bold;
     line-height: 60px;
     @media screen and (max-width: 767px){
+                
+        width: 100%;
         font-size: $heading-h1-res;
         line-height: 48px;
     }
@@ -15,6 +17,8 @@
     font-weight: $font-weight-bold;
     line-height: 48px;
     @media screen and (max-width: 767px){
+        width: 80%;
+        
         font-size: $heading-h2-res;
         line-height: 38px;
     }
@@ -26,6 +30,7 @@
     font-weight: $font-weight-bold;
     line-height: 30px;
     @media screen and (max-width: 767px){
+        width: 80%;
         font-size: $heading-h2-res;
         line-height: 30px;
     }
