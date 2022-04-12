@@ -1608,10 +1608,8 @@ footer .cr {
 }
 
 .blog-card--square:hover {
-  -webkit-box-shadow: 0 0 25px #FFEDC1, 0 0 5px #FFEDC1;
-          box-shadow: 0 0 25px #FFEDC1, 0 0 5px #FFEDC1;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-box-shadow: 5px 5px #FFEDC1;
+          box-shadow: 5px 5px #FFEDC1;
   cursor: pointer;
 }
 
