@@ -739,7 +739,7 @@ body {
 }
 
 .container-cards {
-  background-image: url("/test/assets/img/Frame6.png");
+  background-image: url("assets/img/Frame6.png");
   background-size: contain;
   padding-top: 80px;
   padding-bottom: 80px;
