@@ -28,73 +28,19 @@
         }
     }
 }
+/* 
+clases
+
+blog-card-destacada
+
+blog-card-horizontal
+
+blog-card
+
+*/
 
 
-/* .cards{
-    margin-top: 200px;
-    margin-bottom: 200px;
-    display: grid;
-    grid-template-columns: repeat(3, 25%);
-    justify-content: center;
-    gap:30px;
-    
-    &__card{
-      display: flex;
-      justify-content: center;
-      position: relative;
-      height: auto;
-      width: 90%;
-      cursor: pointer;
-      box-shadow: $regular-shadow;
-      background-color: transparent!important;
-      //border: 1px solid;
-      &:hover{
-       .text{
-         background-color: $color-yellow-3;
-         transition: .5s;
-         transform: scale(1.06);
-         transform:translateX(-10px)
-       }
-       .img{
-         img{
-          transform: scale(1.06);
-          opacity: 0.8;
-          transition: 2s;
-          border-radius: 1rem;
-          transform: rotateZ(.5deg);
-         }
-       }
-      }
-      .img{
-        
-        img{
-          width: 100%;
-          height: auto;
-          border-radius: .5rem;
-          
-        }
-      }
-      .text{
-        background-color:$color-white;
-        width: 80%;
-        height:max-content;
-        padding-right: 10px;
-        padding-left: 10px;
-        position: absolute;
-        align-self: flex-end;
-        bottom: -15px;
-        right: 0px;
-        border-radius: 0.5rem;
-        
-        //border: 1px solid;
-      }
-    }
-  
-  }
-   */
-
-
-  .blog-card{
+  .blog-card-destacada{
     width: 1110px;
     height: 300px;
     //border: 1px solid;

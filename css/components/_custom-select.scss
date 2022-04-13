@@ -2,7 +2,7 @@
 .custom-select {
     position: relative;
     font-family: Arial;
-    width: 240px;
+    padding: 0rem 1rem;
     
   }
   
@@ -11,26 +11,19 @@
   }
   .select-selected {
   background-color: transparent;
-  
+  padding-right: 1.5rem;
+  margin-right: .8rem;
 }
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
-    /* position: absolute;
-    content: "";
-    top: 18px;
-    right: 0;
-    width: 0;
-    height: 0;
-    border: 6px solid transparent;
-    border-color: #fff transparent transparent transparent; */
     content: '';
     position: absolute;
-    right: 0px;
+    right:25px;
     top: 50%;
     transform: translateY(-50%) rotate(45deg);
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-right: 2px solid #fff;
     border-bottom: 2px solid #fff;
   }
@@ -49,6 +42,8 @@
     padding: 8px 16px;
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
+    //background-color: red;
+    
   }
   .select-selected{
     color: white;
@@ -64,10 +59,11 @@
     position: absolute;
     background-color: white;
     top: 100%;
-    left: 0;
+    left: 30px;
     right: 0;
     z-index: 99;
     border-radius: 4px;
+    width: 240px;
     
   }
   
