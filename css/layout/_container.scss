@@ -13,9 +13,10 @@ body{
     box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 1440px;
+    max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 
 
@@ -401,8 +402,8 @@ body{
     background-image: url('/assets/img/fondo-blog.svg');
     background-size:cover;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center!important;
+    align-items: center!important;
     flex-direction: column;
     height: auto;
     padding-top: 175px;
@@ -410,37 +411,11 @@ body{
 
 
 .container-blog-destacado{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    
-    
-    @media screen and (max-width: 767px){
-        display: none;          
-           
-       }
-    &__contenido{
-        display: flex;
+   height: auto;
 
-    }
-    &__h1{
-        align-self: flex-start;
-    }
-    &__img{
-        img{
-            width: auto;
-            height: 350px;
-            border-radius: .5rem;
-        }
-    }
-
-    &__text{
-        margin-left: 1rem;
-    }
 }
 
 .container-blog-card-destacada {
-    
     padding: 0 0 50px 0;
 }
 
@@ -449,11 +424,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: $vertical-spacing-3;
-    max-width: 100%;
+   
     @media screen and (max-width: 767px){
-        //a esto habría que darle unas vueltas...
-          width: 70%;     
+       
+          width: 100%;     
            
        }
     &__h1{
@@ -667,7 +643,7 @@ body{
 }
 
 .container-cards{
-    max-width: 1440px;
+    //max-width: 1440px;
     height: auto;
     display: grid;
     justify-content: center;
@@ -675,8 +651,9 @@ body{
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: $vertical-spacing-3;
     @media screen and (max-width: 767px) {
-        grid-template-columns: auto;
+        grid-template-columns: 100%;
         flex-direction: column;
-        width: auto;
+        width: 100%;
+        justify-content: center;
     }
 }
