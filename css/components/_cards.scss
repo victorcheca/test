@@ -47,11 +47,16 @@ blog-card
   overflow: hidden;
   border-radius: .6rem;
   box-shadow: $regular-shadow;
-  @media screen and (max-width: 767px) {
-
-    height: 11rem;
-
+  @include desktop {
+    height: 16rem;
   }
+  @include tablet {
+    height: 12rem;
+  }
+  @include phone {
+    height: 11rem;
+  }
+  
   &__img {
     //border: 2px solid blue;
     left: 0px;
@@ -83,11 +88,28 @@ blog-card
       padding-left: 6rem;
       padding-top: 2.5rem;
       padding-right: 3rem;
+      @include phone {
+        padding-left: 1.5rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+      }
+      h1{
+        @include desktop {
+          font-size: 1.5rem;
+        }
+        @include phone {
+          font-size: 1rem;
+          
+        }
+      }
 
       p {
         font-size: 17px;
         font-weight: 500;
         line-height: 25px;
+        @include desktop {
+          display: none;
+        }
       }
 
       small {
@@ -98,8 +120,6 @@ blog-card
   }
 
 }
-
-
 
 
  .blog-card{
@@ -113,24 +133,21 @@ blog-card
     &__img {
       top:0px;
       position: relative;
-      width: 100%;
+      max-width: 100%;
       aspect-ratio: 1.6;
+      
       img{
-        position: relative;
-        width: 110%;
-        height: auto;
-        top: 0px;
+        width: 100%;
         
       }
       
     }
     &__container-text {
       position: absolute;
-      overflow: hidden;
+      //overflow: hidden;
       bottom: 0px;
       height: 60%;
       width: 100%;
-      
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -211,8 +228,8 @@ blog-card
 
  }
  
- 
-/* .blog-card {
+ //prueba
+.blog-card-d {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -223,10 +240,11 @@ blog-card
   &__img {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16/9;
+    aspect-ratio:600/300;
 
     img {
       width: 100%;
+      height: auto;
     }
 
     &::before {
@@ -249,7 +267,7 @@ blog-card
     bottom: 0px;
     height: auto;
     width: 100%;
-    padding: 1.5rem;
+    height: 55%;
     display: inline-flex;
     flex-direction: column;
     background-color: #fff;
@@ -272,7 +290,7 @@ blog-card
     }
 
   }
-} */
+}
 
 
 

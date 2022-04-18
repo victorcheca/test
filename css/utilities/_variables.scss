@@ -95,3 +95,37 @@ $regular-shadow:0px 8px 16px rgba(30, 0, 40, 0.08);
 $larger-shadow:0px 16px 48px rgba(30, 0, 40, 0.1);
 
 
+
+
+
+
+//mixins breakpoints
+
+@mixin phone {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+/* 
+uso:
+
+.my-box {
+    padding: 20px;
+
+    @include tablet {
+        padding: 10px;
+    }
+} */

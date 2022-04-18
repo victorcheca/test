@@ -1,9 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
     font-family: $font-family;
-    //display: block;
     margin: 0;
     padding: 0;
-    //margin: 0 auto;
     box-sizing: border-box;
     font-size: 1rem !important;
     line-height: 1.4 !important;
@@ -406,7 +408,8 @@ body{
     align-items: center!important;
     flex-direction: column;
     height: auto;
-    padding-top: 175px;
+    padding-top: 100px;
+    margin:0 auto;
 }
 
 
@@ -444,94 +447,113 @@ body{
 }
 
 .container-caja-accent{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    max-width: 920px;
-    height: 238px;
-    background-color: $color-accent;
-    border-radius: 20px;
     padding-top: $vertical-spacing-1;
     margin-bottom: $vertical-spacing-3;
-    @media screen and (max-width: 767px){
-        max-width: 80%;   
-        height: auto;
-        padding-bottom: 40px;
-           
-       }
-    h1{
-        color:$color-white;
-        line-height: 34px;
-        padding-right: 40px;
-        padding-left: 40px;
-        @media screen and (max-width: 767px){
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-    }
-    p{
-        color:$color-white;
-        line-height: 24px;
-        padding-right: 40px;
-        padding-left: 40px;
-        @media screen and (max-width: 767px){
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-    }
-    .button{
-        margin-top: 30px;
-    }
+    &__contenido{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 920px;
+            height: auto;
+            background-color: $color-accent;
+            border-radius: 20px;
+            margin:0 auto;
+            padding: 2rem;
+            @media screen and (max-width: 767px) {
+                max-width: 80%;
+                height: auto;
+                padding-bottom: 40px;
+
+            }
+
+            h1 {
+                color: $color-white;
+                line-height: 34px;
+                padding-right: 40px;
+                padding-left: 40px;
+
+                @media screen and (max-width: 767px) {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+
+            p {
+                color: $color-white;
+                line-height: 24px;
+                padding-right: 40px;
+                padding-left: 40px;
+
+                @media screen and (max-width: 767px) {
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+
+            .button {
+                margin-top: 30px;
+            }
+                }
+    
 }
 
 .container-caja-yellow{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    max-width: 920px;
-    height: 264px;
-    background-color: $color-yellow-1;
-    border-radius: 20px;
-    padding-top: $vertical-spacing-1;
     margin-bottom: $vertical-spacing-3;
-    @media screen and (max-width: 767px){
-        max-width: 80%;   
+    &__contenido{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        max-width: 920px;
         height: auto;
-        padding: 20px;
-           
-    }
-    &__h1{
-        @media screen and (max-width: 767px){
-            
-        }
-    }
-    h1{
-        color:black;
-        padding-left: 3rem;
-        width: 60%;
-        line-height: 50px;
-        @media screen and (max-width: 767px){
-            width: 100%;
-            padding-left: 1rem;
+        background-color: $color-yellow-1;
+        border-radius: 20px;
+        margin: auto;
+        padding: 2rem;
+        @media screen and (max-width: 767px) {
+            max-width: 80%;
+            height: auto;
+            padding: 20px;
+        
         }
         
-    }
-    &__button{
-        padding-top: 2rem;
-        padding-left: 3rem;
-        @media screen and (max-width: 767px){
+        &-h1 {
+            @media screen and (max-width: 767px) {}
+        }
+        
+        h1 {
+            color: black;
             padding-left: 1rem;
+            width: 60%;
+            line-height: 50px;
+        
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                padding-left: 1rem;
+            }
+        
+        }
+        
+        &-button {
+            padding-top: 0rem;
+            padding-left: 1rem;
+        
+            @media screen and (max-width: 767px) {
+                padding-left: 1rem;
+            }
+        }
+        
+        &-img {
+            position: absolute;
+            align-self: flex-end;
+            padding-right: 5rem;
+            padding-top: 2rem;
+        
+            @media screen and (max-width: 767px) {
+                visibility: hidden;
+            }
         }
     }
-    &__img{
-        position: absolute;
-        align-self: flex-end;
-        padding-right: 5rem;
-        padding-top: 2rem;
-        @media screen and (max-width: 767px){
-            visibility: hidden;
-        }
-   }
+    
 }
 
 
@@ -650,10 +672,28 @@ body{
     gap:30px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: $vertical-spacing-3;
-    @media screen and (max-width: 767px) {
-        grid-template-columns: 100%;
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        
+    }
+
+    @include tablet {
+        grid-template-columns:1fr 1fr;
         flex-direction: column;
         width: 100%;
         justify-content: center;
     }
+
+    @include phone {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    
 }
