@@ -7,7 +7,7 @@
     font-family: $font-family;
     position: fixed;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     background-color: $color-white;
     
@@ -105,6 +105,8 @@ overflow-y: hidden;
 }
 
 .overlay-content {
+    display: flex;
+    flex-direction: column;
     position: relative;
     top: 25%;
     width: 100%;
@@ -130,8 +132,11 @@ overflow-y: hidden;
         height: 0.1px;
         opacity: 0.5;
     }
+
+    
 }
-.overlay-content 
+ 
+
 .overlay-content a:hover {
 opacity: .5;
 }

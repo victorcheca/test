@@ -47,14 +47,15 @@ blog-card
   overflow: hidden;
   border-radius: .6rem;
   box-shadow: $regular-shadow;
+  color:black;
   @include desktop {
-    height: 16rem;
+    height: 20rem;
   }
   @include tablet {
-    height: 12rem;
+    height: 16rem;
   }
   @include phone {
-    height: 11rem;
+    height: 13rem;
   }
   
   &__img {
@@ -62,14 +63,18 @@ blog-card
     left: 0px;
     position: relative;
     height: 100%;
-    //z-index: 1;
+    z-index: 1;
     aspect-ratio: 600/300;
 
+    
+
     img {
-      position: relative;
-      opacity: 1;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      right: 0rem;
     }
 
   }
@@ -82,12 +87,17 @@ blog-card
     //border: 2px solid red;
     background-color: white;
     clip-path: ellipse(100% 140% at 100% 50%);
-
+    z-index: 1;
 
     &__text {
       padding-left: 6rem;
       padding-top: 2.5rem;
       padding-right: 3rem;
+      @include tablet {
+        padding-left: 2rem;
+        padding-top: 1rem;
+        padding-right: 1rem;
+      }
       @include phone {
         padding-left: 1.5rem;
         padding-top: 1rem;
@@ -96,6 +106,9 @@ blog-card
       h1{
         @include desktop {
           font-size: 1.5rem;
+        }
+        @include tablet {
+          font-size: 1.2rem;
         }
         @include phone {
           font-size: 1rem;
@@ -122,7 +135,7 @@ blog-card
 }
 
 
- .blog-card{
+ /* .blog-card{
     display: grid;
     grid-template-rows: 45% 1fr;
     overflow: hidden;
@@ -130,6 +143,7 @@ blog-card
     box-shadow: $regular-shadow;
     border-radius: 8px;
     height: 26rem;
+    color:black;
     &__img {
       top:0px;
       position: relative;
@@ -174,49 +188,78 @@ blog-card
       }
     
     }
- }
+ } */
 
  .blog-card--horizontal{
    display: grid;
    grid-template-columns: 50% 1fr;
    position: relative;
-   height: 12rem;
    overflow: hidden;
    border-radius: .6rem;
    box-shadow: $regular-shadow;
+   color:black;
+   text-decoration: none;
+   //border: 1px solid;
    &__img{
      //border: 2px solid blue;
      left: 0px;
      position: relative;
      height: 100%;
-     //z-index: 1;
-     aspect-ratio: 600/300;
-     img{
-      position: relative; 
-      opacity: 1;
-       height: 100%;
-      right: 0rem;
-     }
+     width: auto;
+     overflow:hidden;
      
-   }
-   &__container-text{
+     img{
+      object-fit: cover;
       position: absolute;
-      right: 0px;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      width: 53%;
-      //border: 2px solid red;
-      background-color: white;
-      clip-path: ellipse(100% 110% at 100% 50%);
+      }
       
-      
+      &::before {
+        content: "";
+        position: absolute;
+        left: initial;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        display: block;
+        clip-path: ellipse(90% 60% at 130% 50%);
+        background:white;
+        z-index: 1;
+        height: 100%;
+        width: 30px;
+      }
+     }
+    
+   
+   &__container-text{
+     position: relative;
+      flex: 1 0 60%;
+      background-color: #fff;
+      padding: 1rem;
+      bottom: 0;
+      overflow: hidden;
+      z-index: 1;
+      height: auto;
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      //border: 1px dashed red;
       &__text{
-        padding-left:2.4rem;
-        padding-top: 1rem;
-        padding-right: 1rem;
+        
+        
         p {
           font-size: 17px;
           font-weight: 500;
           line-height: 25px;
+          @include desktop {
+            font-size: 1.2rem;
+          }
+          @include tablet {
+            font-size: .8rem;
+          }
         }
         
         small {
@@ -228,15 +271,16 @@ blog-card
 
  }
  
- //prueba
-.blog-card-d {
+ 
+.blog-card {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   position: relative;
   box-shadow: $larger-shadow;
   border-radius: 8px;
-
+  color:black;
+  text-decoration: none;
   &__img {
     position: relative;
     overflow: hidden;
@@ -255,7 +299,7 @@ blog-card
       left: 0px;
       right: 0px;
       display: block;
-      clip-path: ellipse(52% 80% at 50% 100%);
+      clip-path: ellipse(52% 74% at 50% 76%);
       background: #fff;
       height: 30px;
       width: 100%;
@@ -267,21 +311,26 @@ blog-card
     bottom: 0px;
     height: auto;
     width: 100%;
-    height: 55%;
+    height: auto;
     display: inline-flex;
     flex-direction: column;
     background-color: #fff;
-
+    padding: 2rem;
 
     &__text {
-      padding-left: 1.1rem;
-      padding-top: 0rem;
-      padding-right: 1rem;
-
-      p {
-        font-size: 24px;
+     
+      h2 {
+        font-size: 1.5rem;
         font-weight: 500;
         line-height: 30px;
+        margin-top:0;
+        margin-bottom: 1.5rem;
+        @include desktop{
+          font-size: 20px;
+        }
+        @include tablet{
+          font-size: 18px;
+        }
       }
 
       small {
@@ -290,23 +339,28 @@ blog-card
     }
 
   }
+
+  /* &--vertical{
+    .blog-card__container-text{
+      padding: 1rem;
+    }
+  } */
+
+  
 }
 
 
 
 
 
-
-
 //card pie de articulo blog
-.blog-card--vertical{
-  width: 255px;
-  height: 350px;      
+/* .blog-card--vertical{  
   display: flex;
   flex-direction: column;
   position: relative;
   box-shadow: $larger-shadow;
   border-radius: 10px!important;
+
   &:hover{
     box-shadow: 0 0 25px $color-yellow-3, 0 0 5px $color-yellow-3;
     transition: .1s;
@@ -314,7 +368,7 @@ blog-card
   }
   &__img{
     img{
-      width: 255px;
+      
       height: auto;
       border-radius: 10px!important;
     }
@@ -327,8 +381,7 @@ blog-card
     bottom: 0px;
     background-color: white;
     //border:1px solid;
-    width: 255px;
-    height: 225px;
+    
     clip-path: ellipse(90% 60% at 50% 70% );
     border-radius: 10px!important;
     &__text{
@@ -348,3 +401,62 @@ blog-card
 }
 
 }
+ */
+
+/* 
+
+.blog-card--vertical {
+  width: 255px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: $larger-shadow;
+  border-radius: 10px !important;
+
+  &:hover {
+    box-shadow: 0 0 25px $color-yellow-3, 0 0 5px $color-yellow-3;
+    transition: .1s;
+    cursor: pointer;
+  }
+
+  &__img {
+    img {
+      width: 255px;
+      height: auto;
+      border-radius: 10px !important;
+    }
+  }
+
+  &__container-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    background-color: white;
+    //border:1px solid;
+    width: 255px;
+    height: 225px;
+    clip-path: ellipse(90% 60% at 50% 70%);
+    border-radius: 10px !important;
+
+    &__text {
+      padding-left: 1.1rem;
+      padding-top: 0rem;
+      padding-right: 1rem;
+
+      p {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+      }
+
+      small {
+        color: #7F7F7F;
+      }
+    }
+
+  }
+
+} */

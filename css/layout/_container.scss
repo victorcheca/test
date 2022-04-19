@@ -403,18 +403,23 @@ body{
 .container-blog{
     background-image: url('/assets/img/fondo-blog.svg');
     background-size:cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center!important;
     align-items: center!important;
     flex-direction: column;
     height: auto;
-    padding-top: 100px;
+    padding-top: $vertical-spacing-1;
     margin:0 auto;
+    &--articulo{
+        background-image: none;
+    }
 }
 
 
 .container-blog-destacado{
    height: auto;
+   width: 100%;
 
 }
 
@@ -499,13 +504,17 @@ body{
 
 .container-caja-yellow{
     margin-bottom: $vertical-spacing-3;
+    
     &__contenido{
         display: flex;
         align-items: flex-start;
         flex-direction: column;
         max-width: 920px;
         height: auto;
-        background-color: $color-yellow-1;
+        background-color: $color-primary;
+        background-image: url("/assets/img/fondo-amarillo.svg");
+        background-size: cover;
+        background-position-y: center;
         border-radius: 20px;
         margin: auto;
         padding: 2rem;
@@ -564,13 +573,13 @@ body{
     flex-direction: column;
     height: auto;
     width: 100%;
+    //este anidamiento no sé si está bien Comentar con David
     .cuerpo-articulo{
         display: flex;
         justify-content: center;
-        align-items: center;
         flex-direction: column;
         max-width: 730px;
-        margin-top: 200px;
+        
         @media screen and (max-width: 767px){
             width: 90%;
         }
@@ -594,42 +603,30 @@ body{
             margin-top: $vertical-spacing-2;
            
         }
+        .container-button-articulo{
+            align-self:center ;
+        }
         
     }
     .pie-articulo{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 40px;
+        padding: 3rem;
         background-color: $color-grey-6;
         width: 100%;
         
         .pie-articulo__contenido{
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
-            max-width:min-content;
-            @media screen and (max-width: 767px){
-                flex-direction: column;
-            }
-            .heading-pie{
-                display: flex;
-                align-self: flex-start;
-                @media screen and (max-width: 767px){
-                    line-height: 40px;
-                    font-size: 38px;
-                }
-            }
+            
             .container-cards-pie{
-                display: flex;
-                justify-content:center;
-                align-items: center;
-                gap:30px;
-                @media screen and (max-width: 767px){
-                    flex-direction: column;
-                    width: auto;
-                }
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap:20px
             }
+           
+            
         }
         
     }
@@ -657,11 +654,14 @@ body{
     align-self: flex-start;
     gap:20px;
     margin-bottom: $vertical-spacing-3;
+
     p{
         font-size: 16px;
         line-height: 24px;
         font-weight: $font-weight-bold;
     }
+
+    
 }
 
 .container-cards{
