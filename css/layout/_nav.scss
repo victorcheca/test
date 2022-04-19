@@ -7,6 +7,10 @@
         padding: 20px;
         color:$color-dark;
         font-weight: $font-weight-bold;
+        &:hover{
+            background-color: $color-yellow-4;
+            border-radius: 5rem;
+        }
     }
 }
 
@@ -59,7 +63,7 @@
             font-weight: $font-weight-normal;
             font-size: 16px;
             &:hover{
-                text-decoration: underline;
+                color:$color-primary;
 
             }
         }
@@ -69,7 +73,7 @@
             font-weight: $font-weight-normal;
             font-size: 16px;
             margin-right: 1em;
-            //width: auto;
+            
         }
         
     }

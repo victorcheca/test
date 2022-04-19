@@ -1,8 +1,9 @@
 .header{
     width: 100%;
+    //max-width: 1500px;
     height: 75px;
     display:flex;
-    justify-content: center;
+    justify-content:center;
     box-shadow: $regular-shadow;
     font-family: $font-family;
     position: fixed;
@@ -19,7 +20,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 80%;
+        width: 100%;
+        max-width: 1500px;
         padding: 20px;
         
         @media screen and (max-width: 767px){

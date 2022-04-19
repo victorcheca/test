@@ -88,22 +88,22 @@ blog-card
     background-color: white;
     clip-path: ellipse(100% 140% at 100% 50%);
     z-index: 1;
-
+    //arriba derecha abajo izquierda
+    padding:2rem 4rem 2rem 6rem;
+    @include desktop{
+      padding: 3rem 1rem 1rem 4rem;
+    }
+    @include tablet {
+      padding: 3rem 1rem 1rem 3rem;
+    }
+    @include phone {
+      padding: 3rem 2rem 2rem 2rem;
+    }
     &__text {
-      padding-left: 6rem;
-      padding-top: 2.5rem;
-      padding-right: 3rem;
-      @include tablet {
-        padding-left: 2rem;
-        padding-top: 1rem;
-        padding-right: 1rem;
-      }
-      @include phone {
-        padding-left: 1.5rem;
-        padding-top: 1rem;
-        padding-right: 1rem;
-      }
+      
+      
       h1{
+        margin-top: 0;
         @include desktop {
           font-size: 1.5rem;
         }
@@ -243,14 +243,13 @@ blog-card
       overflow: hidden;
       z-index: 1;
       height: auto;
-      width: 100%;
       display: inline-flex;
       flex-direction: column;
       //border: 1px dashed red;
       &__text{
         
         
-        p {
+        h2 {
           font-size: 17px;
           font-weight: 500;
           line-height: 25px;
@@ -299,7 +298,7 @@ blog-card
       left: 0px;
       right: 0px;
       display: block;
-      clip-path: ellipse(52% 74% at 50% 76%);
+      clip-path: ellipse(52% 100% at 50% 120%);
       background: #fff;
       height: 30px;
       width: 100%;
@@ -310,13 +309,20 @@ blog-card
     position: relative;
     bottom: 0px;
     height: auto;
-    width: 100%;
+    //width: 100%;
     height: auto;
     display: inline-flex;
     flex-direction: column;
     background-color: #fff;
     padding: 2rem;
+    overflow: hidden;
+    @include tablet {
+      padding: 1.5rem;
+    }
 
+    @include phone {
+      padding: 1.5rem;
+    }
     &__text {
      
       h2 {
@@ -331,6 +337,9 @@ blog-card
         @include tablet{
           font-size: 18px;
         }
+        @include phone{
+          font-size: 15px;
+        }
       }
 
       small {
@@ -340,11 +349,7 @@ blog-card
 
   }
 
-  /* &--vertical{
-    .blog-card__container-text{
-      padding: 1rem;
-    }
-  } */
+  
 
   
 }

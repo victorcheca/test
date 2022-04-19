@@ -1,6 +1,3 @@
-* {
-    box-sizing: border-box;
-}
 
 body{
     font-family: $font-family;
@@ -12,7 +9,7 @@ body{
 }
 
 .container{
-    box-sizing: border-box;
+    //box-sizing: border-box;
     padding-left: 1rem;
     padding-right: 1rem;
     max-width: 1320px;
@@ -326,6 +323,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
     @media screen and (max-width: 767px){
         width: 100%;
         height: auto;
@@ -389,6 +387,7 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        
         img{
             max-width: 120px;
             height: auto;
@@ -413,6 +412,37 @@ body{
     margin:0 auto;
     &--articulo{
         background-image: none;
+        .pie-articulo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3rem;
+            background-color: $color-grey-6;
+            width: 100%;
+        
+            .pie-articulo__contenido {
+                display: flex;
+                flex-direction: column;
+        
+                .container-cards-pie {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 20px;
+                    @include desktop{
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @include tablet{
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @include phone {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                }
+        
+        
+            }
+        
+        }
     }
 }
 
@@ -554,8 +584,7 @@ body{
         &-img {
             position: absolute;
             align-self: flex-end;
-            padding-right: 5rem;
-            padding-top: 2rem;
+            padding: 3em;
         
             @media screen and (max-width: 767px) {
                 visibility: hidden;
@@ -592,11 +621,29 @@ body{
             }
         }
 
+        //usado para la imagen
         .separador{
             align-self: flex-start;
             margin-top: 0;
             margin-bottom: 0;
         }
+
+        .container-hr-separador{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            height: 0;
+            .hr-separador {
+                width: 100px;
+                position: absolute;
+                left: 0px;
+                border: solid 3px $color-primary;
+                border-radius: 4px;
+            }
+        }
+        
         hr{
             width: 100%;
             border:1px solid;
@@ -608,28 +655,7 @@ body{
         }
         
     }
-    .pie-articulo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 3rem;
-        background-color: $color-grey-6;
-        width: 100%;
-        
-        .pie-articulo__contenido{
-            display: flex;
-            flex-direction: column;
-            
-            .container-cards-pie{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap:20px
-            }
-           
-            
-        }
-        
-    }
+    
 
     .p-intro{
         font-size: 20px;
