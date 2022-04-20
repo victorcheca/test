@@ -35,6 +35,7 @@ body{
         @media screen and (max-width: 767px){
             height: auto;
             flex-direction: column;
+            align-items: center;
         }
     }
     &__texto {
@@ -45,16 +46,14 @@ body{
         flex-basis: 45%;
         @media screen and (max-width: 767px){
             width: 90%;
+            align-items: center;
+
         }
-        /* h2{
-            font-size: 48px;
-            font-weight: $font-weight-bold;
-            line-height: 60px;
-            @media screen and (max-width: 767px){
-                font-size: $heading-h1-res;
-                line-height: 48px;
-            }
-        } */
+        .button{
+           @include tablet{
+               width: 90%;
+           }
+        }
     }
     &__imagen{
         display: flex;
@@ -120,10 +119,7 @@ body{
         line-height: 48px;
     }
     &__contenido{
-       /*  display: flex;
-        flex-wrap: wrap;
-        justify-content:space-around;
-        align-items: center; */
+       padding: 2rem;
         
         &-img{
             /* display: flex;
@@ -182,11 +178,11 @@ body{
     padding-bottom: $vertical-spacing-3;
     
     &-contenido{
-        
+        padding: 2rem;
         
         @media screen and (max-width: 767px){
             height: auto;
-            margin-top: $vertical-spacing-4;
+            
         }
         &__texto{
             padding-bottom: $vertical-spacing-3;
@@ -238,14 +234,16 @@ body{
 }
 
 .container-cards-index{
-    background-image: url("/assets/img/Frame6.png");
+    background-image: url("assets/img/rectangle91.png");
     background-size: contain;
     padding-top: $vertical-spacing-4;
     padding-bottom: $vertical-spacing-4;
     display: flex;
+    padding-left: 2rem;
+    padding-right: 2rem;
     @media screen and (max-width: 767px){
        height: auto;
-       
+       align-items: center;
     }
     &__items{
         display: flex;
@@ -272,6 +270,10 @@ body{
     background-color: $color-grey-6;
     padding-top: $vertical-spacing-4;
     padding-bottom: $vertical-spacing-4;
+    @include tablet{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -280,6 +282,7 @@ body{
         display: flex;
         flex-direction: row;
         justify-content:space-between;
+        padding: 2rem;
         @media screen and (max-width: 767px){
             padding-top: 0;
             padding-bottom: 0;
@@ -288,6 +291,7 @@ body{
     }
     &__text{
         width: 40%;
+        min-width: 400px;
         display: flex;
         flex-direction: column;
         @media screen and (max-width: 767px){
@@ -329,7 +333,7 @@ body{
         height: auto;
         align-items: center;
         margin: 0 auto;
-        margin-top: $vertical-spacing-4;
+        
     }
     &__seccion{
         display: flex;
@@ -375,6 +379,7 @@ body{
                 height: 80%;
                 @media screen and (max-width: 767px){
                     width: 330px;
+                    margin-top: 2rem;
                 }
             }
         }
@@ -504,25 +509,13 @@ body{
             h1 {
                 color: $color-white;
                 line-height: 34px;
-                padding-right: 40px;
-                padding-left: 40px;
-
-                @media screen and (max-width: 767px) {
-                    padding-right: 20px;
-                    padding-left: 20px;
-                }
+                
             }
 
             p {
                 color: $color-white;
                 line-height: 24px;
-                padding-right: 40px;
-                padding-left: 40px;
-
-                @media screen and (max-width: 767px) {
-                    padding-right: 20px;
-                    padding-left: 20px;
-                }
+                
             }
 
             .button {
@@ -534,7 +527,6 @@ body{
 
 .container-caja-yellow{
     margin-bottom: $vertical-spacing-3;
-    
     &__contenido{
         display: flex;
         align-items: flex-start;
@@ -547,31 +539,35 @@ body{
         background-position-y: center;
         border-radius: 20px;
         margin: auto;
-        padding: 2rem;
+        padding: 3rem;
         position: relative;
         @media screen and (max-width: 767px) {
             max-width: 80%;
             height: auto;
-            padding: 20px;
+            padding: 1rem;
         
         }
         
         &-h1 {
-            @media screen and (max-width: 767px) {}
-        }
-        
-        h1 {
-            color: black;
-            padding-left: 1rem;
-            width: 60%;
-            line-height: 50px;
-        
-            @media screen and (max-width: 767px) {
-                width: 100%;
-                padding-left: 1rem;
+            h1 {
+                color: black;
+                width: 60%;
+                line-height: 50px;
+                margin-top: 0;
+                @include tablet{
+                    width: 100%;
+                }
+                
+            
             }
-        
+
+            @media screen and (max-width: 767px) {
+                padding: 1rem;
+            }
+
         }
+        
+        
         
         &-button {
             padding-top: 0rem;
