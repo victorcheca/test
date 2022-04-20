@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-Víctor</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="js/burger.js"></script>
+    <script src="js/custom-select.js"></script>
+</head>
+
+<body>
+    <!-- buscar emmet abreviation -->
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header__container">
+            <!-- NAVEGACIÓN PÁGINA PRINCIPAL -->
+            <div class="header__logo">
+                <a href="index.html"><img class="logo" src="assets/logo/Logo.svg" alt=""></a>
+            </div>
+            <div class="header__nav">
+                <nav class="menu-principal">
+                    <div class="menu-princial__item"><a href="blog.html">Blog</a></div>
+                    <div class="menu-princial__item"><a href="listas_ejemplo.html">Listas de ejemplo</a></div>
+                    <div class="menu-princial__item"><a href="#">Catálogo</a></div>
+                </nav>
+            </div>
+            <div class="header__login">
+                <a href="#" class="button button--accent-outline">Accede</a>
+                <a href="#" class="button button--accent">Crea tu lista</a>
+            </div>
+
+
+            <!--MENÚ NAVEGACIÓN DISPOSITIVOS MÓVILES  -->
+
+            <div id="myNav" class="overlay">
+                <div class="overlay-content">
+                    <a href="blog.html">Blog</a>
+                    <a href="#">Listas de ejemplo</a>
+                    <a href="#">Catálogo</a>
+                    <hr>
+                    <div class="overlay-content__login">
+                        <a href="#" class="button button--overlay button--accent-outline">Accede</a>
+                        <a href="#" class="button button--overlay button--accent">Crea tu lista</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="burger" class="container-burger burger">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+        </div><!-- fin header__container -->
+
+
+    </header>
+    <!-- MENÚ BLOG -->
+    <header class="blog-nav">
+        <div class="container">
+            <div class="blog-nav__container">
+
+                <!-- responsive -->
+                <div class="menu-blog-responsive">
+                    <div class="menu-blog-responsive__item"><a href="#">Categorias</a></div>
+                </div>
+
+                <div class="blog-nav__logo">
+                    <a href="blog.html"><img class="logo" src="assets/logo/blogBB.svg" alt=""></a>
+
+                </div>
+                <nav class="blog-nav__menu-blog">
+                    <div class="menu-blog__item"><a href="#">Todo el contenido</a></div>
+                    <div class="menu-blog__item">
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Maternidad</option>
+                                <option value="1">Todo</option>
+                                <option value="2">Embarazo</option>
+                                <option value="3">Preparándose para el bebé</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="menu-blog__item">
+                        <div class="custom-select">
+                            <select>
+                                <option value="0">Productos</option>
+                                <option value="1"><a href="#">Todo</a></option>
+                                <option value="2">Carritos</option>
+                                <option value="3">Cunas</option>
+                                <option value="4">Portabebés</option>
+                                <option value="5">Pañales</option>
+                                <option value="6">Ropa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- <div class="menu-blog__item"><a href="#">Maternidad</a></div>
+              <div class="menu-blog__item"><a href="#">Productos</a></div>  -->
+                </nav>
+                <form>
+                    <div class="blog-nav__search">
+                        <input type="search" id="mySearch" name="" placeholder="Buscar... ">
+                        <img class="lupa" src="assets/img/Lupa.svg" alt="">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </header><!-- FIN MENÚ BLOG -->
+
+
+    <div class="container-blog">
+        <div class="container">
+
+           
+
+<div class="container-seccion">
+
+    <div class="container-seccion__h1">
+        <h1 class="heading-1">Listas de ejemplo</h1>
+    </div>
+
+    <div class="container-cards">
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/habitacion_bebe_estilo_nordico.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/bebe_y_su_papa_que_juegan_con_un_sonajero.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/recien_nacido_dormidito.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/habitacion_bebe_estilo_nordico.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/bebe_y_su_papa_que_juegan_con_un_sonajero.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/recien_nacido_dormidito.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/recien_nacido_dormidito.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+        
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/habitacion_bebe_estilo_nordico.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+        
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/bebe_y_su_papa_que_juegan_con_un_sonajero.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+        
+        <a href="#" class="blog-card">
+            <div class="blog-card__img">
+                <img src="assets/img/recien_nacido_dormidito.jpeg" alt="">
+            </div>
+            <div class="blog-card__container-text">
+                <div class="blog-card__container-text__text">
+                    <h2>Objetos fundamentales para el primer año de tu bebé</h2>
+                    <small>Maternidad</small>
+                </div>
+            </div>
+        </a>
+
+    </div><!-- fin container cards -->
+
+    
+</div><!-- fin container sección productos -->
+
+
+
+
+
+
+
+
+
+            <div class="container-caja-yellow">
+                <div class="container-caja-yellow__contenido">
+                    <div class="container-caja-yellow__contenido-h1">
+                        <h1>Se acerca ese día tan esperado... ¿Ya lo tienes todo a punto?</h1>
+                    </div>
+
+                    <div class="container-caja-yellow__contenido-button">
+                        <div><a href="#" class="button button--accent">Empieza tu lista</a></div>
+                    </div>
+                    <div class="container-caja-yellow__contenido-img">
+                        <img src="assets/img/Group 200.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div><!-- fin container -->
+    </div><!-- fin container blog -->
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="footer-cols">
+            <div class="footer-cols__col">
+                <h2>Tu lista</h2>
+                <ul>
+                    <li><a href="#">Accede</a></li>
+                    <li><a href="#">Crea tu lista</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-cols__col">
+                <h2>Blog</h2>
+                <ul>
+                    <li><a href="#">Guísas sobre productos</a></li>
+                    <li><a href="#">Guías sobre maternidad</a></li>
+                    <li><a href="#">Listas de ejemplo</a></li>
+                </ul>
+            </div>
+            <div class="footer-cols__col">
+                <h2>HelloBB</h2>
+                <ul>
+                    <li><a href="#">Contscto</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Aviso legal</a></li>
+                    <li><a href="#">Afiliación y publicidad</a></li>
+                </ul>
+            </div>
+            <div class="footer-cols__col">
+                <h2>Síguenos</h2>
+                <div class="footer__redes">
+                    <img src="assets/icons/ico-social-instagram.ff7eba4.svg" alt="">
+                    <img src="assets/icons/ico-social-pinterest.04a417c.svg" alt="">
+                    <img src="assets/icons/face.svg" alt="">
+                </div>
+                <div class="container-descargate">
+                    <h2>Descárgate nuestra App</h2>
+                    <div class="footer__redes"><img class="img-app" src="assets/icons/Group.png" alt=""><img
+                            class="img-app" src="assets/icons/Groupapple.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="cr footer-cols">© helloBB 2022 — Todos los derechos reservados</p>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

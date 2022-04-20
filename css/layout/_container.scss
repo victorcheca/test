@@ -548,6 +548,7 @@ body{
         border-radius: 20px;
         margin: auto;
         padding: 2rem;
+        position: relative;
         @media screen and (max-width: 767px) {
             max-width: 80%;
             height: auto;
@@ -584,6 +585,7 @@ body{
         &-img {
             position: absolute;
             align-self: flex-end;
+            top: 0px;
             padding: 3em;
         
             @media screen and (max-width: 767px) {
