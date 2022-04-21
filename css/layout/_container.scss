@@ -234,7 +234,7 @@ body{
 }
 
 .container-cards-index{
-    background-image: url("assets/img/rectangle91.png");
+    background-image: url("/assets/img/rectangle90.png");
     background-size: contain;
     padding-top: $vertical-spacing-4;
     padding-bottom: $vertical-spacing-4;
@@ -690,9 +690,9 @@ body{
 
 .container-cards{
     //max-width: 1440px;
-    height: auto;
+    //height: auto;
     display: grid;
-    justify-content: center;
+    //justify-content: center;
     gap:30px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: $vertical-spacing-3;

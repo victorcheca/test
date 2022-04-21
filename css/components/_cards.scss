@@ -291,9 +291,9 @@
       left: 0px;
       right: 0px;
       display: block;
-      clip-path: ellipse(52% 100% at 50% 120%);
+      clip-path: ellipse(60% 91% at 50% 127%);
       background: #fff;
-      height: 30px;
+      height: 40px;
       width: 100%;
     }
   }
@@ -341,62 +341,72 @@
     }
 
   }
-
-  
-
-  
 }
 
 
-
-//card pie de articulo blog
-/* .blog-card--vertical{  
+.blog-cardf{
+  box-shadow: $small-shadow;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   position: relative;
-  box-shadow: $larger-shadow;
-  border-radius: 10px!important;
-
-  &:hover{
-    box-shadow: 0 0 25px $color-yellow-3, 0 0 5px $color-yellow-3;
-    transition: .1s;
-    cursor:pointer;
-  }
-  &__img{
-    img{
+  height: 27rem;
+  text-decoration: none;
+  color:black;
+  overflow: hidden;
+    a::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    a:focus{
+      outline: none;
+      text-decoration: underline;
+    }
+    &__container-text{
+      padding: 3rem 2rem 2rem 2rem;
+      //display: flex;
+      //flex-direction: column;
+      //flex: 1 0 auto;
+      clip-path: ellipse(115% 100% at 50% 100%);
+      background-color: white;
+      z-index: 1;
+      position: absolute;
+      bottom: 0px;
+      height: 12rem;
+      overflow: hidden;
+      &__text{
+        display: flex;
+        flex-direction: column;
+        height: 12rem;
+        flex: 1 0 auto;
+        h2{
+          font-size: 1.5rem;
+          font-weight: 500;
+          line-height: 30px;
+          margin-top: 0;
+          margin-bottom: 1.5rem;
+        }
+        small{
+          margin-top: auto;
+          color: #7F7F7F;
+        }
+      }
       
-      height: auto;
-      border-radius: 10px!important;
     }
-  }
-  &__container-text{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 0px;
-    background-color: white;
-    //border:1px solid;
-    
-    clip-path: ellipse(90% 60% at 50% 70% );
-    border-radius: 10px!important;
-    &__text{
-      padding-left: 1.1rem;
-      padding-top: 0rem;
-      padding-right: 1rem;
-      p{
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 30px;
-      }
-      small{
-        color: #7F7F7F;
+    &__img{
+      height: 12rem;
+      width: auto;
+      position: relative;
+      img{
+        width: 100%;
+        height: auto;
+        object-fit:contain;
+        z-index: 1;
       }
     }
-  
-}
 
 }
- */
-
-
