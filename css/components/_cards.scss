@@ -368,15 +368,12 @@
     }
     &__container-text{
       padding: 3rem 2rem 2rem 2rem;
-      //display: flex;
-      //flex-direction: column;
-      //flex: 1 0 auto;
       clip-path: ellipse(115% 100% at 50% 100%);
       background-color: white;
       z-index: 1;
       position: absolute;
-      bottom: 0px;
-      height: 12rem;
+      bottom: 0;
+      height: 11rem;
       overflow: hidden;
       &__text{
         display: flex;
@@ -384,7 +381,7 @@
         height: 12rem;
         flex: 1 0 auto;
         h2{
-          font-size: 1.5rem;
+          font-size: 1.6rem;
           font-weight: 500;
           line-height: 30px;
           margin-top: 0;

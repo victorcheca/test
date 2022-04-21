@@ -2077,8 +2077,8 @@ footer .cr {
   background-color: white;
   z-index: 1;
   position: absolute;
-  bottom: 0px;
-  height: 12rem;
+  bottom: 0;
+  height: 11rem;
   overflow: hidden;
 }
 
@@ -2097,7 +2097,7 @@ footer .cr {
 }
 
 .blog-cardf__container-text__text h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 30px;
   margin-top: 0;
