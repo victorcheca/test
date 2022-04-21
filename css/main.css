@@ -2056,6 +2056,11 @@ footer .cr {
   overflow: hidden;
 }
 
+.blog-cardf:hover {
+  -webkit-box-shadow: 0px 0px 20px 1px #c7c7c7;
+          box-shadow: 0px 0px 20px 1px #c7c7c7;
+}
+
 .blog-cardf a::after {
   content: '';
   position: absolute;
@@ -2071,7 +2076,7 @@ footer .cr {
 }
 
 .blog-cardf__container-text {
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 3rem 2rem 3rem 2rem;
   -webkit-clip-path: ellipse(115% 100% at 50% 100%);
           clip-path: ellipse(115% 100% at 50% 100%);
   background-color: white;
@@ -2090,7 +2095,7 @@ footer .cr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 12rem;
+  height: 11rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
