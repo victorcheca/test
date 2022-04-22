@@ -17,12 +17,13 @@
 
    
 .blog-nav{
-    padding: .9rem 0;
-    margin-top:75px;
+    padding: .5rem 0;
+    //margin-top:75px;
     background-color: $color-dark;
     width: 100%;
-    //position: fixed;
-    z-index:1;
+    position: sticky;
+    top:75px;
+    z-index:2;
     &__container{
         display:flex;
         flex-wrap: wrap;
