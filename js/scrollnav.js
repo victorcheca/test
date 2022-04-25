@@ -8,8 +8,8 @@ window.addEventListener('scroll', function(){
     document.getElementById("blog-nav").style.top="75px";
     document.getElementById("header").style.transition=".5s";
     document.getElementById("blog-nav").style.transition=".5s";
-    document.getElementById("header").style.transitionDelay="1s";
-    document.getElementById("blog-nav").style.transitionDelay="1s";
+    document.getElementById("header").style.transitionDelay=".5s";
+    document.getElementById("blog-nav").style.transitionDelay=".5s";
    
   }
     
@@ -19,8 +19,8 @@ window.addEventListener('scroll', function(){
     document.getElementById("blog-nav").style.top="0px";
     document.getElementById("header").style.transition=".5s";
     document.getElementById("blog-nav").style.transition=".5s";
-    document.getElementById("header").style.transitionDelay="1s";
-    document.getElementById("blog-nav").style.transitionDelay="1s";
+    document.getElementById("header").style.transitionDelay=".5s";
+    document.getElementById("blog-nav").style.transitionDelay=".5s";
    
   }
   scrollPos = (document.body.getBoundingClientRect()).top;

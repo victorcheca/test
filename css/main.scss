@@ -1,7 +1,7 @@
 
 
 //UTILITIES
-@import "utilities/variables";
+@import "utilities/variables.scss";
 //LAYOUT
 @import 'layout/header.scss';
 @import 'layout/headings.scss';
@@ -9,8 +9,8 @@
 @import 'layout/login.scss';
 @import 'layout/logo.scss';
 @import 'layout/container.scss';
-
-@import 'layout/footer';
+@import 'layout/modal.scss';
+@import 'layout/footer.scss';
 //COMPONENTS
 @import 'components/buttons.scss';
 @import 'components/cards.scss';

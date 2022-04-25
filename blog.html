@@ -9,8 +9,9 @@
     <script src="js/burger.js"></script>
     <script src="js/custom-select.js"></script>
     <script src="js/scrollnav.js"></script>
+    <script src="js/modal.js"></script>
 </head>
-<body>
+<body id="body">
     <!-- buscar emmet abreviation -->
     <!-- HEADER -->
     <header id="header" class="header">
@@ -324,11 +325,31 @@
             <p>No te pierdas nuestras listas de ejemplo que se adaptan a cada situación</p>
           </div>
           <div class="container-caja-accent__contenido-button">
-            <div><a href="#" class="button button--yellow">Ver listas de ejemplo</a></div>
+            <div><a id="myBtn" class="button button--yellow">Ver listas de ejemplo</a></div>
           </div>
         </div>
       </div>
       
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Header</h2>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the Modal Body</p>
+            <p>Some other text...</p>
+          </div>
+          <div class="modal-footer">
+            <h3>Footer</h3>
+          </div>
+        </div>
+      
+      </div>
 
 
 
