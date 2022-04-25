@@ -1644,6 +1644,8 @@ body .fade {
 
 .modal-body {
   padding: 2px 16px;
+  overflow: scroll;
+  max-height: 40vh;
 }
 
 .modal-footer {
